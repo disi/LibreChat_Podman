@@ -1,0 +1,65 @@
+# Save this file as /opt/librechat/.env
+
+# --- PostGres DB ---
+POSTGRES_DB=mydatabase
+POSTGRES_USER=myuser
+POSTGRES_PASSWORD=mypassword
+
+# --- Meili Search ---
+Environment=MEILI_HTTP_ADDR=0.0.0.0:7700
+Environment=MEILI_NO_ANALYTICS=true
+Environment=MEILI_MASTER_KEY=XXXX # generated on first start of Meilisearch
+
+# Performance Tuning
+Environment=MEILI_MAX_INDEXING_MEMORY=8GiB
+
+# --- RAG API ---
+RAG_PORT=8000
+RAG_HOST=0.0.0.0
+DB_HOST=chat-vectordb
+
+# EMBEDDINGS
+EMBEDDINGS_PROVIDER=openai
+EMBEDDINGS_MODEL=text-embedding
+RAG_OPENAI_API_KEY=sk-XXXXX
+RAG_OPENAI_BASEURL=https://some_provider/
+
+# CHUNKING
+# To keep one line whole, we set overlap to 0
+CHUNK_SIZE=1500
+CHUNK_OVERLAP=0
+
+# RAG OPTIONS
+RAG_USE_FULL_CONTEXT=false
+
+# VECTOR STORAGE
+COLLECTION_NAME=DATA
+
+# --- LibreChat ---
+HOST=0.0.0.0
+PORT=3080
+
+# Provider
+MONGO_URI=mongodb://chat-mongodb:27017/LibreChat
+MEILI_HOST=http://chat-meilisearch:7700
+RAG_API_URL=http://chat-rag_api:8000
+
+# User
+UID=1000
+GID=1000
+
+# API (keys) openssl rand -hex 32
+CREDS_KEY=XXX
+CREDS_IV=XXX
+
+# JHT (encryption) openssl rand -hex 32
+JWT_SECRET=XXX
+JWT_REFRESH_SECRET=XXX
+
+# Login methods
+ALLOW_EMAIL_LOGIN=true
+# Allow local user accounts
+ALLOW_REGISTRATION=true
+# Allow social accounts like Google, Facebook
+ALLOW_SOCIAL_LOGIN=false
+ALLOW_SOCIAL_REGISTRATION=false
