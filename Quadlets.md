@@ -11,7 +11,9 @@
     ```
   - MongoDB
     - create the directory
-      ``` # mkdir -p /opt/librechat/mongodb ```
+    ```
+      # mkdir -p /opt/librechat/mongodb
+    ```
     - quadlet /etc/containers/systemd/cont-librechat-mongodb.container
     ```
       [Unit]
