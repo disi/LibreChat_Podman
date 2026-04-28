@@ -39,7 +39,9 @@
     ```
   - MeiliSearch
     - create the directory
+    ```
       # mkdir -p /opt/librechat/meilisearch
+    ```
     - quadlet /etc/containers/systemd/cont-librechat-meilisearch.container
     ```
       [Unit]
@@ -68,7 +70,9 @@
     ```
   - PGVector
     - create the directory
-      ``` # mkdir -p /opt/librechat/pgvector ```
+    ```
+      # mkdir -p /opt/librechat/pgvector
+    ```
     - quadlet /etc/containers/systemd/cont-librechat-pgvector.container
     ```
       [Unit]
@@ -103,7 +107,9 @@
     ```
   - RAG_API
     - update the .env file
-      ``` # touch /opt/librechat/.env ```
+    ```
+      # touch /opt/librechat/.env
+    ```
     - quadlet /etc/containers/systemd/cont-librechat-rag-api.container
     ```
       [Unit]
@@ -131,7 +137,9 @@
     ```
   - LibreChat
     - create the librechat.yaml
-      ``` # touch /opt/librechat/librechat.yaml ```
+    ```
+      # touch /opt/librechat/librechat.yaml
+    ```
     - create the directory
     ```
       # mkdir -p /opt/librechat/librechat/{images,uploads,logs}
