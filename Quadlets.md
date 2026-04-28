@@ -24,7 +24,7 @@
       ContainerName=chat-mongodb
       Image=docker.io/mongo:latest
 
-      # ':Z' for SELinux labeling
+      # Persistence mapping
       Volume=/opt/librechat/mongodb:/data/db:Z
 
       # Networking
@@ -54,7 +54,7 @@
       ContainerName=chat-meilisearch
       Image=docker.io/getmeili/meilisearch:latest
 
-      # The ':Z' is vital for your /opt/ folder on Linux
+      # Persistence mapping
       Volume=/opt/librechat/meilisearch:/meili_data:Z
 
       # Environment
